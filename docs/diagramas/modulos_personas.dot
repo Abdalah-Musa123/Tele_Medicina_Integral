@@ -1,0 +1,12 @@
+digraph equipo {
+ graph [rankdir=LR, bgcolor=white, pad=0.24, ranksep=0.55,
+ label="Distribución de módulos del proyecto", labelloc=t, fontsize=22, fontname="DejaVu Sans"];
+ node [shape=box, style="rounded,filled", fillcolor="#E7F5F6", color="#8ABDC2", fontname="DejaVu Sans", fontsize=12, margin="0.3,0.2"];
+ p1 [label="Persona 1\nArquitectura, acceso, navegación"];
+ p2 [label="Persona 2\nPasos 1–4"];
+ p3 [label="Persona 3\nPasos 5–8"];
+ p4 [label="Persona 4\nModelos, API, pasos 9–10"];
+ p5 [label="Persona 5\nServicios, UML, flujo"];
+ api [label="Aplicación Flutter integrada\njson-server + Riverpod", fillcolor="#D9F1E8"];
+ p1->api; p2->api; p3->api; p4->api; p5->api;
+}

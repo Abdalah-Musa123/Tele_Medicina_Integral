@@ -1,0 +1,489 @@
+{
+  "pacientes": [
+    {
+      "id": "p1",
+      "nombre": "Ana Pérez (demo)",
+      "correo": "ana.demo@example.com",
+      "telefono": "809-000-0001",
+      "seguroId": "s1"
+    },
+    {
+      "id": "p2",
+      "nombre": "Luis Gómez (demo)",
+      "correo": "luis.demo@example.com",
+      "telefono": "809-000-0002",
+      "seguroId": "s2"
+    },
+    {
+      "id": "p3",
+      "nombre": "Carmen López (demo)",
+      "correo": "carmen.demo@example.com",
+      "telefono": "809-000-0003",
+      "seguroId": null
+    },
+    {
+      "nombre": "María Ejemplo (demo)",
+      "correo": "maria.ejemplo@example.com",
+      "telefono": "809-000-0099",
+      "seguroId": null,
+      "id": "EzUhlXxbKhc"
+    },
+    {
+      "nombre": "Carlos Martinez",
+      "correo": "Carlos.martinez@gmail.com",
+      "telefono": "809-000-0099",
+      "seguroId": "nP_YL854o8I",
+      "id": "zpxwHZazd9M"
+    }
+  ],
+  "seguros": [
+    {
+      "id": "s1",
+      "pacienteId": "p1",
+      "aseguradora": "ARS Ejemplo A",
+      "numeroAfiliacion": "AF-0001",
+      "coberturaPorcentaje": 80,
+      "autorizacion": "AUT-DEMO-1001",
+      "vigente": true
+    },
+    {
+      "id": "s2",
+      "pacienteId": "p2",
+      "aseguradora": "ARS Ejemplo B",
+      "numeroAfiliacion": "AF-0002",
+      "coberturaPorcentaje": 70,
+      "autorizacion": "AUT-DEMO-1002",
+      "vigente": true
+    },
+    {
+      "pacienteId": "zpxwHZazd9M",
+      "aseguradora": "ARS TeleSalud (demo)",
+      "numeroAfiliacion": "AF-1794235821286",
+      "coberturaPorcentaje": 80,
+      "autorizacion": "AUT-DEMO-1794235821286",
+      "vigente": true,
+      "id": "nP_YL854o8I"
+    }
+  ],
+  "citas": [
+    {
+      "id": "c1",
+      "pacienteId": "p1",
+      "fechaHora": "2026-11-09T10:00:00",
+      "motivo": "Consulta de seguimiento",
+      "estado": "realizada",
+      "medico": "Dra. Rivera (demo)",
+      "canal": "Portal"
+    },
+    {
+      "id": "c2",
+      "pacienteId": "p2",
+      "fechaHora": "2026-11-09T11:30:00",
+      "motivo": "Control de rutina",
+      "estado": "realizada",
+      "medico": "Dr. Santos (demo)",
+      "canal": "Correo"
+    },
+    {
+      "id": "c3",
+      "pacienteId": "p3",
+      "fechaHora": "2026-11-12T14:00:00",
+      "motivo": "Solicitud inicial de prueba",
+      "estado": "solicitada",
+      "medico": "Por asignar",
+      "canal": "WhatsApp"
+    },
+    {
+      "pacienteId": "EzUhlXxbKhc",
+      "fechaHora": "2026-11-10T10:00:00",
+      "motivo": "Consulta general de demostración",
+      "estado": "realizada",
+      "medico": "Dra. Rivera (demo)",
+      "canal": "Portal",
+      "id": "hGV1J-kQrw0"
+    },
+    {
+      "pacienteId": "zpxwHZazd9M",
+      "fechaHora": "2026-11-10T10:00:00",
+      "motivo": "Consulta Medica general",
+      "estado": "realizada",
+      "medico": "Dra. Rivera (demo)",
+      "canal": "Portal",
+      "id": "p3qCu4O74-8"
+    }
+  ],
+  "recetas": [
+    {
+      "id": "r1",
+      "citaId": "c1",
+      "medicamentos": [
+        "Medicamento demostrativo"
+      ],
+      "instrucciones": "Registro simulado; no usar como indicación médica",
+      "fecha": "2026-11-09"
+    },
+    {
+      "citaId": "hGV1J-kQrw0",
+      "medicamentos": [
+        "Tratamiento ficticio, sin validez clínica"
+      ],
+      "instrucciones": "Instrucciones solo para fines académicos",
+      "fecha": "2026-11-09",
+      "id": "wM2GeYA8fos"
+    },
+    {
+      "citaId": "hGV1J-kQrw0",
+      "medicamentos": [
+        "Tratamiento ficticio, sin validez clínica"
+      ],
+      "instrucciones": "Instrucciones solo para fines académicos",
+      "fecha": "2026-11-09",
+      "id": "2DdNn0qTb58"
+    },
+    {
+      "citaId": "hGV1J-kQrw0",
+      "medicamentos": [
+        "Tratamiento ficticio, sin validez clínica"
+      ],
+      "instrucciones": "Instrucciones solo para fines académicos",
+      "fecha": "2026-11-09",
+      "id": "Noogz-fR6X8"
+    },
+    {
+      "citaId": "p3qCu4O74-8",
+      "medicamentos": [
+        "Tratamiento ficticio, sin validez clínica"
+      ],
+      "instrucciones": "Instrucciones solo para fines académicos",
+      "fecha": "2026-11-09",
+      "id": "Dqe409LwptQ"
+    }
+  ],
+  "ordenes": [
+    {
+      "id": "o1",
+      "citaId": "c1",
+      "tipo": "Estudio",
+      "descripcion": "Orden de laboratorio (solo demostración)",
+      "estado": "emitida"
+    },
+    {
+      "citaId": "hGV1J-kQrw0",
+      "tipo": "Laboratorio",
+      "descripcion": "Estudio de laboratorio ficticio",
+      "estado": "emitida",
+      "id": "MjXDQAqX-M4"
+    },
+    {
+      "citaId": "hGV1J-kQrw0",
+      "tipo": "Laboratorio",
+      "descripcion": "Estudio de laboratorio ficticio",
+      "estado": "emitida",
+      "id": "T6V7_OfvBlI"
+    },
+    {
+      "citaId": "hGV1J-kQrw0",
+      "tipo": "Laboratorio",
+      "descripcion": "Estudio de laboratorio ficticio",
+      "estado": "emitida",
+      "id": "Ge4-PqREB0A"
+    },
+    {
+      "citaId": "p3qCu4O74-8",
+      "tipo": "Laboratorio",
+      "descripcion": "Estudio de laboratorio ficticio",
+      "estado": "emitida",
+      "id": "CLtK4DD-82g"
+    }
+  ],
+  "facturas": [
+    {
+      "id": "f1",
+      "citaId": "c1",
+      "pacienteId": "p1",
+      "subtotal": 1800,
+      "total": 1800,
+      "estado": "pagada",
+      "metodoPago": "simulado",
+      "fechaEmision": "2026-11-09",
+      "fechaPago": "2026-11-09"
+    },
+    {
+      "citaId": "c2",
+      "pacienteId": "p2",
+      "subtotal": 1800,
+      "total": 1800,
+      "estado": "pendiente",
+      "metodoPago": "simulado",
+      "fechaEmision": "2026-11-09",
+      "fechaPago": null,
+      "id": "06detQRP-uQ"
+    }
+  ],
+  "reclamaciones": [],
+  "seguimientos": [
+    {
+      "id": "seg1",
+      "citaId": "c1",
+      "pacienteId": "p1",
+      "fechaRecordatorio": "2026-11-16",
+      "canal": "Correo",
+      "encuestaPuntuacion": 5,
+      "encuestaComentario": "bla 530",
+      "proximaCita": "2026-12-09",
+      "estado": "encuesta_completada"
+    },
+    {
+      "citaId": "c2",
+      "pacienteId": "p2",
+      "fechaRecordatorio": "2026-11-16",
+      "canal": "WhatsApp",
+      "encuestaPuntuacion": null,
+      "encuestaComentario": null,
+      "proximaCita": null,
+      "estado": "programado",
+      "id": "01MGz3neSe0"
+    }
+  ],
+  "recepciones": [
+    {
+      "id": "recep1",
+      "citaId": "c1",
+      "pacienteId": "p1",
+      "motivoConfirmado": "Consulta de seguimiento",
+      "observaciones": "Recepción verificada (demo)",
+      "fechaRecepcion": "2026-11-08T08:30:00"
+    },
+    {
+      "citaId": "hGV1J-kQrw0",
+      "pacienteId": "EzUhlXxbKhc",
+      "motivoConfirmado": "Consulta general de demostración",
+      "observaciones": "Datos recibidos correctamente (demo)",
+      "fechaRecepcion": "2026-11-09T08:52:14.530",
+      "id": "2UbEvVz26vc"
+    },
+    {
+      "citaId": "hGV1J-kQrw0",
+      "pacienteId": "EzUhlXxbKhc",
+      "motivoConfirmado": "Consulta general de demostración",
+      "observaciones": "Datos recibidos correctamente (demo)",
+      "fechaRecepcion": "2026-11-09T08:53:37.452",
+      "id": "XdQKKpcHPfo"
+    },
+    {
+      "citaId": "p3qCu4O74-8",
+      "pacienteId": "zpxwHZazd9M",
+      "motivoConfirmado": "Consulta Medica general",
+      "observaciones": "Datos recibidos correctamente",
+      "fechaRecepcion": "2026-11-09T10:50:07.538",
+      "id": "9KIbDjnGS00"
+    }
+  ],
+  "validaciones": [
+    {
+      "id": "val1",
+      "citaId": "c1",
+      "pacienteId": "p1",
+      "seguroId": "s1",
+      "afiliacion": "AF-0001",
+      "coberturaPorcentaje": 80,
+      "autorizacion": "AUT-DEMO-1001",
+      "resultado": "aprobada",
+      "fechaValidacion": "2026-11-08T08:35:00"
+    },
+    {
+      "citaId": "hGV1J-kQrw0",
+      "pacienteId": "EzUhlXxbKhc",
+      "seguroId": null,
+      "afiliacion": "Sin afiliación",
+      "coberturaPorcentaje": 0,
+      "autorizacion": "Pendiente",
+      "resultado": "pendiente",
+      "fechaValidacion": "2026-11-09T08:52:18.125",
+      "id": "P9kKeaEbXKw"
+    },
+    {
+      "citaId": "hGV1J-kQrw0",
+      "pacienteId": "EzUhlXxbKhc",
+      "seguroId": null,
+      "afiliacion": "Sin afiliación",
+      "coberturaPorcentaje": 0,
+      "autorizacion": "Pendiente",
+      "resultado": "pendiente",
+      "fechaValidacion": "2026-11-09T08:53:39.440",
+      "id": "ZMEimMA-McU"
+    },
+    {
+      "citaId": "p3qCu4O74-8",
+      "pacienteId": "zpxwHZazd9M",
+      "seguroId": "nP_YL854o8I",
+      "afiliacion": "AF-1794235821286",
+      "coberturaPorcentaje": 80,
+      "autorizacion": "AUT-DEMO-1794235821286",
+      "resultado": "aprobada",
+      "fechaValidacion": "2026-11-09T10:50:24.546",
+      "id": "LY8dx24-GtE"
+    }
+  ],
+  "confirmaciones": [
+    {
+      "id": "conf1",
+      "citaId": "c1",
+      "pacienteId": "p1",
+      "canal": "WhatsApp",
+      "mensaje": "Cita confirmada (envío simulado)",
+      "fechaConfirmacion": "2026-11-08T08:40:00"
+    },
+    {
+      "citaId": "hGV1J-kQrw0",
+      "pacienteId": "EzUhlXxbKhc",
+      "canal": "WhatsApp",
+      "mensaje": "Cita confirmada (envío simulado)",
+      "fechaConfirmacion": "2026-11-09T08:52:23.036",
+      "id": "ZTLzRZA5-Ug"
+    },
+    {
+      "citaId": "hGV1J-kQrw0",
+      "pacienteId": "EzUhlXxbKhc",
+      "canal": "WhatsApp",
+      "mensaje": "Cita confirmada (envío simulado)",
+      "fechaConfirmacion": "2026-11-09T08:53:45.877",
+      "id": "5VyGDFKUHfY"
+    },
+    {
+      "citaId": "p3qCu4O74-8",
+      "pacienteId": "zpxwHZazd9M",
+      "canal": "WhatsApp",
+      "mensaje": "Cita confirmada (envío simulado)",
+      "fechaConfirmacion": "2026-11-09T10:50:35.787",
+      "id": "APdpR5OAMbc"
+    }
+  ],
+  "admisiones": [
+    {
+      "id": "adm1",
+      "citaId": "c1",
+      "pacienteId": "p1",
+      "identificacion": "Validación de ejemplo",
+      "consentimiento": true,
+      "fechaAdmision": "2026-11-08T08:45:00"
+    },
+    {
+      "citaId": "hGV1J-kQrw0",
+      "pacienteId": "EzUhlXxbKhc",
+      "identificacion": "Identidad verificada de forma simulada",
+      "consentimiento": true,
+      "fechaAdmision": "2026-11-09T08:52:34.908",
+      "id": "yK-i3j_HVyU"
+    },
+    {
+      "citaId": "hGV1J-kQrw0",
+      "pacienteId": "EzUhlXxbKhc",
+      "identificacion": "Identidad verificada de forma simulada",
+      "consentimiento": true,
+      "fechaAdmision": "2026-11-09T08:53:52.294",
+      "id": "MmS2XFKwbNs"
+    },
+    {
+      "citaId": "p3qCu4O74-8",
+      "pacienteId": "zpxwHZazd9M",
+      "identificacion": "Identidad verificada de forma simulada",
+      "consentimiento": true,
+      "fechaAdmision": "2026-11-09T10:50:41.653",
+      "id": "AYIAuEe9dQg"
+    }
+  ],
+  "consultas": [
+    {
+      "id": "cons1",
+      "citaId": "c1",
+      "pacienteId": "p1",
+      "medio": "Videollamada simulada",
+      "fechaFinalizacion": "2026-11-08T09:00:00",
+      "estado": "finalizada"
+    },
+    {
+      "citaId": "hGV1J-kQrw0",
+      "pacienteId": "EzUhlXxbKhc",
+      "medio": "Videollamada simulada",
+      "fechaFinalizacion": "2026-11-09T08:53:01.940",
+      "estado": "finalizada",
+      "id": "hG9-MFh67kg"
+    },
+    {
+      "citaId": "hGV1J-kQrw0",
+      "pacienteId": "EzUhlXxbKhc",
+      "medio": "Videollamada simulada",
+      "fechaFinalizacion": "2026-11-09T08:53:58.456",
+      "estado": "finalizada",
+      "id": "dA6yj_a-EgI"
+    },
+    {
+      "citaId": "p3qCu4O74-8",
+      "pacienteId": "zpxwHZazd9M",
+      "medio": "Videollamada simulada",
+      "fechaFinalizacion": "2026-11-09T10:50:48.131",
+      "estado": "finalizada",
+      "id": "aC8o-UZdlbg"
+    }
+  ],
+  "resultados": [
+    {
+      "id": "res1",
+      "citaId": "c1",
+      "referimiento": "No requerido",
+      "fecha": "2026-11-08T09:05:00"
+    },
+    {
+      "citaId": "hGV1J-kQrw0",
+      "referimiento": "No requerido",
+      "fecha": "2026-11-09T08:53:13.002",
+      "id": "8ySlE5lR2gs"
+    },
+    {
+      "citaId": "hGV1J-kQrw0",
+      "referimiento": "No requerido",
+      "fecha": "2026-11-09T08:54:04.681",
+      "id": "VUTUD6Cx0aY"
+    },
+    {
+      "citaId": "hGV1J-kQrw0",
+      "referimiento": "No requerido",
+      "fecha": "2026-11-09T08:54:06.480",
+      "id": "6gZgTmqqq68"
+    },
+    {
+      "citaId": "p3qCu4O74-8",
+      "referimiento": "No requerido",
+      "fecha": "2026-11-09T10:50:53.139",
+      "id": "r3D6ME69ITw"
+    }
+  ],
+  "servicios": [
+    {
+      "id": "serv1",
+      "nombre": "Consulta médica general",
+      "categoria": "Clínico",
+      "descripcion": "Consulta remota simulada"
+    },
+    {
+      "id": "serv2",
+      "nombre": "Verificación de seguro",
+      "categoria": "Asistencial",
+      "descripcion": "Revisión ficticia de afiliación y cobertura"
+    },
+    {
+      "id": "serv3",
+      "nombre": "Seguimiento posconsulta",
+      "categoria": "Derivado",
+      "descripcion": "Recordatorios y evaluación de satisfacción"
+    },
+    {
+      "id": "serv4",
+      "nombre": "Órdenes y referimientos",
+      "categoria": "Derivado",
+      "descripcion": "Resultados clínicos ficticios"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

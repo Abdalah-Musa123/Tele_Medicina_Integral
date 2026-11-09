@@ -1,0 +1,16 @@
+{
+  "name": "telesalud-api-simulada",
+  "version": "1.0.0",
+  "private": true,
+  "description": "API REST académica para los 10 pasos de telemedicina",
+  "scripts": {
+    "start": "json-server db.json --port 3000",
+    "start:lan": "json-server db.json --port 3000 --host 0.0.0.0",
+    "check": "node validar_db.js",
+    "reset": "node reset.js",
+    "test": "node api.test.js"
+  },
+  "devDependencies": {
+    "json-server": "1.0.0-beta.15"
+  }
+}

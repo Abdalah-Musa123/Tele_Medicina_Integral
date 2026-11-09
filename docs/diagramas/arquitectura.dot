@@ -1,0 +1,24 @@
+digraph Arquitectura {
+  graph [rankdir=TB, bgcolor="white", pad=0.28, nodesep=0.46, ranksep=0.55,
+  label="Arquitectura Flutter + TeleSalud", labelloc=t, fontsize=23, fontname="DejaVu Sans", fontcolor="#164354"];
+  node [shape=box, style="rounded,filled", fontname="DejaVu Sans", fontsize=12,
+        color="#BAD2DB", fillcolor="#ECF7F8", fontcolor="#143E4C", penwidth=1.2, margin="0.25,0.13"];
+  edge [color="#2D7180", arrowsize=0.8, penwidth=1.5];
+  subgraph cluster_flutter {
+    label="Flutter (plataforma)"; color="#AED7E0"; style="rounded";
+    framework [label="Framework (widgets, Material, navegación)"];
+    engine [label="Engine (renderizado y ejecución)"];
+    embedder [label="Embedder (Chrome / Android)"];
+    framework -> engine -> embedder;
+  }
+  subgraph cluster_app {
+    label="Aplicación TeleSalud"; color="#99D5CA"; style="rounded";
+    ui [label="Capa UI\nLogin, panel, 10 pasos, servicios", fillcolor="#DDF4EF"];
+    riverpod [label="Estado / Providers\nRiverpod", fillcolor="#E1F1F7"];
+    repo [label="Repositorio\nTelemedicinaRepository"];
+    http [label="ApiClient\nHTTP + JSON"];
+    db [label="json-server REST\napi/db.json", fillcolor="#FFF2D7", color="#E5C17E"];
+    ui -> riverpod -> repo -> http -> db;
+  }
+  framework -> ui [style=dashed, label="Dart"];
+}

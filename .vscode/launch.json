@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "TeleSalud: Flutter web Chrome",
+      "type": "dart",
+      "request": "launch",
+      "deviceId": "chrome",
+      "toolArgs": ["--dart-define=API_BASE_URL=http://localhost:3000"]
+    }
+  ]
+}

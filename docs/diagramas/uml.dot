@@ -1,0 +1,21 @@
+digraph UML {
+  graph [rankdir=LR, bgcolor=white, pad=0.25, nodesep=0.52, ranksep=1.05,
+      label="UML simplificado — entidades de TeleSalud", labelloc=t, fontname="DejaVu Sans", fontsize=21];
+  node [shape=record, style="filled", fillcolor="#ECF8F8", color="#6DA7AA", fontname="DejaVu Sans", fontsize=10, margin="0.14,0.10"];
+  edge [color="#457A85", arrowsize=0.7, fontname="DejaVu Sans", fontsize=10];
+  paciente [label="{Paciente|id: String\lnombre: String\lcorreo: String\ltelefono: String\lseguroId?: String\l}"];
+  seguro [label="{Seguro|id: String\lpacienteId: String\laseguradora: String\lcoberturaPorcentaje: double\lvigente: bool\l}"];
+  cita [label="{Cita|id: String\lpacienteId: String\lfechaHora: String\lmotivo: String\lestado: String\lcanal: String\l}"];
+  receta [label="{Receta|id: String\lcitaId: String\lmedicamentos: List\linstrucciones: String\l}"];
+  orden [label="{OrdenMedica|id: String\lcitaId: String\ltipo: String\ldescripcion: String\l}"];
+  factura [label="{Factura|id: String\lcitaId: String\ltotal: double\lestado: String\l}", fillcolor="#FDF1D9"];
+  reclamacion [label="{Reclamacion|id: String\lfacturaId: String\lseguroId: String\lmontoReclamado: double\l}", fillcolor="#FDF1D9"];
+  seguimiento [label="{Seguimiento|id: String\lcitaId: String\lfechaRecordatorio: String\lencuestaPuntuacion?: int\l}", fillcolor="#FDF1D9"];
+  paciente -> cita [label="1 a N"];
+  paciente -> seguro [label="0..1"];
+  cita -> receta [label="0..N"];
+  cita -> orden [label="0..N"];
+  cita -> factura [label="0..1"];
+  factura -> reclamacion [label="0..1"];
+  cita -> seguimiento [label="0..1"];
+}

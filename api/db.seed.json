@@ -1,0 +1,208 @@
+{
+  "pacientes": [
+    {
+      "id": "p1",
+      "nombre": "Ana Pérez (demo)",
+      "correo": "ana.demo@example.com",
+      "telefono": "809-000-0001",
+      "seguroId": "s1"
+    },
+    {
+      "id": "p2",
+      "nombre": "Luis Gómez (demo)",
+      "correo": "luis.demo@example.com",
+      "telefono": "809-000-0002",
+      "seguroId": "s2"
+    },
+    {
+      "id": "p3",
+      "nombre": "Carmen López (demo)",
+      "correo": "carmen.demo@example.com",
+      "telefono": "809-000-0003",
+      "seguroId": null
+    }
+  ],
+  "seguros": [
+    {
+      "id": "s1",
+      "pacienteId": "p1",
+      "aseguradora": "ARS Ejemplo A",
+      "numeroAfiliacion": "AF-0001",
+      "coberturaPorcentaje": 80,
+      "autorizacion": "AUT-DEMO-1001",
+      "vigente": true
+    },
+    {
+      "id": "s2",
+      "pacienteId": "p2",
+      "aseguradora": "ARS Ejemplo B",
+      "numeroAfiliacion": "AF-0002",
+      "coberturaPorcentaje": 70,
+      "autorizacion": "AUT-DEMO-1002",
+      "vigente": true
+    }
+  ],
+  "citas": [
+    {
+      "id": "c1",
+      "pacienteId": "p1",
+      "fechaHora": "2026-11-09T10:00:00",
+      "motivo": "Consulta de seguimiento",
+      "estado": "realizada",
+      "medico": "Dra. Rivera (demo)",
+      "canal": "Portal"
+    },
+    {
+      "id": "c2",
+      "pacienteId": "p2",
+      "fechaHora": "2026-11-09T11:30:00",
+      "motivo": "Control de rutina",
+      "estado": "realizada",
+      "medico": "Dr. Santos (demo)",
+      "canal": "Correo"
+    },
+    {
+      "id": "c3",
+      "pacienteId": "p3",
+      "fechaHora": "2026-11-12T14:00:00",
+      "motivo": "Solicitud inicial de prueba",
+      "estado": "solicitada",
+      "medico": "Por asignar",
+      "canal": "WhatsApp"
+    }
+  ],
+  "recetas": [
+    {
+      "id": "r1",
+      "citaId": "c1",
+      "medicamentos": [
+        "Medicamento demostrativo"
+      ],
+      "instrucciones": "Registro simulado; no usar como indicación médica",
+      "fecha": "2026-11-09"
+    }
+  ],
+  "ordenes": [
+    {
+      "id": "o1",
+      "citaId": "c1",
+      "tipo": "Estudio",
+      "descripcion": "Orden de laboratorio (solo demostración)",
+      "estado": "emitida"
+    }
+  ],
+  "facturas": [
+    {
+      "id": "f1",
+      "citaId": "c1",
+      "pacienteId": "p1",
+      "subtotal": 1800.0,
+      "total": 1800.0,
+      "estado": "pendiente",
+      "metodoPago": "simulado",
+      "fechaEmision": "2026-11-09",
+      "fechaPago": null
+    }
+  ],
+  "reclamaciones": [],
+  "seguimientos": [
+    {
+      "id": "seg1",
+      "citaId": "c1",
+      "pacienteId": "p1",
+      "fechaRecordatorio": "2026-11-16",
+      "canal": "Correo",
+      "encuestaPuntuacion": null,
+      "encuestaComentario": null,
+      "proximaCita": "2026-12-09",
+      "estado": "programado"
+    }
+  ],
+  "recepciones": [
+    {
+      "id": "recep1",
+      "citaId": "c1",
+      "pacienteId": "p1",
+      "motivoConfirmado": "Consulta de seguimiento",
+      "observaciones": "Recepción verificada (demo)",
+      "fechaRecepcion": "2026-11-08T08:30:00"
+    }
+  ],
+  "validaciones": [
+    {
+      "id": "val1",
+      "citaId": "c1",
+      "pacienteId": "p1",
+      "seguroId": "s1",
+      "afiliacion": "AF-0001",
+      "coberturaPorcentaje": 80,
+      "autorizacion": "AUT-DEMO-1001",
+      "resultado": "aprobada",
+      "fechaValidacion": "2026-11-08T08:35:00"
+    }
+  ],
+  "confirmaciones": [
+    {
+      "id": "conf1",
+      "citaId": "c1",
+      "pacienteId": "p1",
+      "canal": "WhatsApp",
+      "mensaje": "Cita confirmada (envío simulado)",
+      "fechaConfirmacion": "2026-11-08T08:40:00"
+    }
+  ],
+  "admisiones": [
+    {
+      "id": "adm1",
+      "citaId": "c1",
+      "pacienteId": "p1",
+      "identificacion": "Validación de ejemplo",
+      "consentimiento": true,
+      "fechaAdmision": "2026-11-08T08:45:00"
+    }
+  ],
+  "consultas": [
+    {
+      "id": "cons1",
+      "citaId": "c1",
+      "pacienteId": "p1",
+      "medio": "Videollamada simulada",
+      "fechaFinalizacion": "2026-11-08T09:00:00",
+      "estado": "finalizada"
+    }
+  ],
+  "resultados": [
+    {
+      "id": "res1",
+      "citaId": "c1",
+      "referimiento": "No requerido",
+      "fecha": "2026-11-08T09:05:00"
+    }
+  ],
+  "servicios": [
+    {
+      "id": "serv1",
+      "nombre": "Consulta médica general",
+      "categoria": "Clínico",
+      "descripcion": "Consulta remota simulada"
+    },
+    {
+      "id": "serv2",
+      "nombre": "Verificación de seguro",
+      "categoria": "Asistencial",
+      "descripcion": "Revisión ficticia de afiliación y cobertura"
+    },
+    {
+      "id": "serv3",
+      "nombre": "Seguimiento posconsulta",
+      "categoria": "Derivado",
+      "descripcion": "Recordatorios y evaluación de satisfacción"
+    },
+    {
+      "id": "serv4",
+      "nombre": "Órdenes y referimientos",
+      "categoria": "Derivado",
+      "descripcion": "Resultados clínicos ficticios"
+    }
+  ]
+}
